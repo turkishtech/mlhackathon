@@ -1,0 +1,7 @@
+{
+  "pipeline": "spacy_sklearn",
+  "path" : "./projects",
+  "data" : "./data/train_prio.json",
+  "language": "de"
+
+}
