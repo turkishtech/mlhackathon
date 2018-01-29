@@ -13,6 +13,9 @@ matplotlib = ''
 numpy = ''
 sklearn = ''
 spacy = ''
+language-check = ''
+nltk = ''
+rasa_nlu = ''
 
 
 [requires]
