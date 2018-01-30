@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>DT Hackathon</title>
+<link rel="stylesheet" type="text/css" href="../static/css/styles.css" />
+</head>
+<body>
+    <header class="pink"> 
+            
+                <hgroup>
+                    <h1>DT Hackathon</h1>
+                </hgroup>
+                
+        
+            
+    </header>
+    <img src="../static/images/logo.png" align="right" style="width:100px;height:100px;" class="topright">
+    <div class="line pink"></div>
+    <div class="background_image">
+    <br>
+    <br>
+    <form action="/categorize" method="post" style="margin: 0 auto; width:700px;">
+        <textarea name="text_to_categorize" placeholder="Input text here" rows="20" cols="80" wrap="soft"></textarea>
+        <select name="method">
+          <option value="1a">Task 1a</option>
+          <option value="1b">Task 1b</option>
+          <option value="2">Task 2</option>
+        </select>
+        <input type="submit" value="Categorize" class="suit_and_tie">
+    </form>
+    <br>
+    <br>
+    </div>
+    <div style="float:left; width: 40%;">
+    {% if input != ""|string() %}
+        <br>
+        <h3 style="color:#383838;">
+        Input Data:</h3>
+        <h3 style="color:#383838;">
+        {{ input }}</h3>
+    {% endif %}
+    </div>
+    <div style="float:right; width: 60%; border-left: 1px solid gray; margin-left: -1px; height: 600px;">
+    {% if input != ""|string() %}
+    {% if data|length > 0 %}
+    <br>
+    <h3 style="color:#383838; margin-left: 20px;">
+        {{ data[0] }}
+    </h3>
+    <br>
+    {% for result in data[1:] %}
+    <h3 style="color:#383838; margin-left: 20px;">
+        {{ result + "\r\n"|string() }}
+    </h3>
+    <br>
+    {% endfor %}
+    {% elif start == "False"|string() %}
+    <div style="color:#383838; margin-left: 20px;">
+        No Results found
+    </div>
+    {{ input }}
+    {% endif %}
+    {% endif %}
+    </div>
+
+</body>
+</html>

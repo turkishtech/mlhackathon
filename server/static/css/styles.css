@@ -1,0 +1,96 @@
+*{
+	/* Universal reset: */
+	margin:0;
+	padding:0;
+}
+
+body{
+    font-family:"Myriad Pro","Helvetica Neue",Helvetica,Arial,Sans-Serif;
+    background-color:#d0d0d0;
+}
+.pink{
+    font-size:0.825em;
+    color:#383838;
+    background-color:#d0d0d0;
+}
+
+
+/* Headings: */
+
+h1{
+	/* The logo text */
+	font-size:5em;
+	padding:0.25em 0 0.25em;
+	text-transform:uppercase;
+}
+
+h3{
+	/* The slogan text */
+	font-family:forte,"Myriad Pro","Helvetica Neue",Helvetica,Arial,Sans-Serif;
+	font-size:1.5em;
+	font-weight:normal;
+	margin:0 0 1em;
+}
+
+
+
+.line{
+	/* The dividing line: */
+	height:1px;
+	border-bottom:1px solid #416371;
+	#margin:1em 0;
+	overflow:hidden;
+}
+
+.background_image{
+    background: url("../images/background.jpg");
+}
+
+.topright {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+    font-size: 18px;
+}
+textarea{
+    background-color: #d0d0d0;
+    font-size:1em;
+}
+select {
+    width: 20%;
+    border: 2px solid white;
+    color: white;
+    background-color: black;
+    text-align: "middle";
+    font-size:1.5em;
+}
+
+.suit_and_tie {
+ /* font */
+ color: white;
+ font-size: 1.5em;
+
+ 
+ /* border */
+ border: 2px solid white;
+ 
+ /* transitions */
+ transition-duration: .2s;
+ -webkit-transition-duration: .2s;
+ -moz-transition-duration: .2s;
+ 
+ /* other */
+ background-color: black;
+ padding: 4px 30px;
+}
+
+.suit_and_tie:hover {
+ /* update text color and background color */
+ color:black;
+ background-color:white;
+ 
+  /* transitions */
+ transition-duration: .2s;
+ -webkit-transition-duration: .11s;
+ -moz-transition-duration: .2s;
+}
