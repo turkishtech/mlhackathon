@@ -42,3 +42,8 @@ for index, post_data in enumerate(csv_data_posts.items()):
     key = post_data[0]
     post_text = post_data[1]['text']
     post_comments = post_data[1]['comments']
+
+with open('posts_csv') as posts_csv:
+    writer = csv.writer(posts_csv)
+    for key, value in csv_data.items():
+        writer.writerow([key, value])
